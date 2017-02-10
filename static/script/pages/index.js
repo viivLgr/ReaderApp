@@ -40,6 +40,10 @@ $.get('/ajax/index',function(data){
 				return '/book?id='+book_id;
 			},
 			tabSwitch:function(pos){
+				var scrollTop = $('.slide-wrap').scrollTop();//获得元素的滚动条高度
+				if(scrollTop>0){
+					$('.slide-wrap').scrollTop(0);
+				}
 				if(pos == 1){
 					this.swiper_tab1_on = false;
 					this.swiper_tab2_on = true;

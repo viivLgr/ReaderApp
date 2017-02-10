@@ -83,14 +83,15 @@ app.use(controller.get('/book',function*(){
 	var bookId = params.id;
 	this.body = yield render('book',{nav:"书籍详情",bookId:bookId});
 }));
+
+
 //线上接口
-var querystring = require('querystring');
 app.use(controller.get('/ajax/book',function*(){
 	this.set('Cache-Control','no-cache');
 	var params = querystring.parse(this.req._parsedUrl.query);
 	var id = params.id;
 	if(!id){
-		id = '';
+		id = "18218";
 	}
 	this.body = service.get_book_data(id);
 }));
@@ -144,16 +145,5 @@ app.use(controller.get('/ajax/category',function*(){
 	this.body = service.get_category_data();
 }));
 
-//书籍
-app.use(controller.get('/ajax/book',function*(){
-	this.set('Cache-Control','no-cache');
-	var params = querystring.parse(this.req._parsedUrl.query);
-	var id = params.id;
-	if(!id){
-		id = "18218";
-	}
-	this.body = service.get_book_data(id);
-}));
-
 app.listen(3001);
-console.log('koa is start');
+console.log('ReaderApp is start');

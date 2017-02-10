@@ -3,7 +3,6 @@ $.get('/ajax/book', function(data) {
 	if(screenHeight<480){
 		screenHeight = 480;
 	}
-	console.log(data);
 	new Vue({
 		el: '#appBook',
 		data: {
