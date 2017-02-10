@@ -1,0 +1,12 @@
+.common-score{
+	color: #666;
+	margin-top: 5px;
+}
+.common-score span{
+	display: inline-block;
+    width: 80px;
+    height: 12px;
+    background: url(../img/star.png) no-repeat;
+    background-size: cover;
+    margin-right: 5px;
+}

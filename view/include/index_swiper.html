@@ -1,0 +1,43 @@
+<section class="swiper-home">
+	<a href="/search">
+		<div class="top-home-search">输入书名/作者/关键字搜索</div>
+	</a>
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide" v-for="(item,index) in swiper" v-if="index<1">
+	        	<a v-bind:href="item.reference_id">
+					<img v-bind:alt="item.ad_name" v-bind:src="item.ad_pic_url" class="cover">
+				</a>
+	        </div>
+	    </div>
+	</div>
+	<ul class="category-home">
+		<li>
+			<a href="/male">
+				<img class="category-icon" src="/static/img/male.png" />
+				<p class="category-des">男生</p>
+			</a>
+		</li>
+		<li>
+			<a href="/female">
+				<img class="category-icon" src="/static/img/female.png" />
+				<p class="category-des">女生</p>
+			</a>
+		</li>
+
+		<li>
+			<a href="/category">
+				<img class="category-icon" src="/static/img/category.png" />
+				<p class="category-des">分类</p>
+			</a>
+		</li>
+
+		<li>
+			<a href="/rank">
+				<img class="category-icon" src="/static/img/rank.png" />
+				<p class="category-des">排行</p>
+			</a>
+		</li>
+
+	</ul>
+</section>

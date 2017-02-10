@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="/static/css/swiper-3.4.1.min.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/all.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/pages/male.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/score.css">
+		<title><%=nav %></title>
+    </head>
+    <body>
+		<% include include/common_header.html %>
+		<div class="male-container" id="female" v-bind:style="[screenHeight,screenWidth]">
+			<div class="data">
+				<h2>{{data1_tit}}</h2>
+				<ul>
+					<li v-for="item in data1">
+						<div class="img">
+							<img :src="item.cover" :alt="item.title">
+						</div>
+						<div class="content">
+							<p class="title">{{item.title}}</p>
+							<p class="summary">{{item.summary}}</p>
+							<p class="author">{{item.authors}}
+								<span v-for="(tag,index) in item.tags" v-if="index<3">{{tag}}</span>
+							</p>
+							<% include include/common_score.html %>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="data">
+				<h2>{{data2_tit}}</h2>
+				<ul>
+					<li v-for="item in data2">
+						<div class="img">
+							<img :src="item.cover" :alt="item.title">
+						</div>
+						<div class="content">
+							<p class="title">{{item.title}}</p>
+							<p class="summary">{{item.summary}}</p>
+							<p class="author">{{item.authors}}
+								<span v-for="(tag,index) in item.tags" v-if="index<3">{{tag}}</span>
+							</p>
+							<% include include/common_score.html %>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="data">
+				<h2>{{data3_tit}}</h2>
+				<ul>
+					<li v-for="item in data3">
+						<div class="img">
+							<img :src="item.cover" :alt="item.title">
+						</div>
+						<div class="content">
+							<p class="title">{{item.title}}</p>
+							<p class="summary">{{item.summary}}</p>
+							<p class="author">{{item.authors}}
+								<span v-for="(tag,index) in item.tags" v-if="index<3">{{tag}}</span>
+							</p>
+							<% include include/common_score.html %>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="data data04">
+				<h2>{{data4_tit}}</h2>
+				<ul>
+					<li v-for="item in data4">
+						<div class="img">
+							<img :src="item.cover" :alt="item.title">
+						</div>
+						<div class="content">
+							<p class="title">{{item.title}}</p>
+							<p class="summary">{{item.summary}}</p>
+							<p class="author">{{item.authors}}
+								<span v-for="(tag,index) in item.tags" v-if="index<3">{{tag}}</span>
+							</p>
+							<% include include/common_score.html %>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+    </body>
+<script type="text/javascript" src="/static/script/vue.js"></script>
+<script type="text/javascript" src="/static/script/zepto.js"></script>
+<script type="text/javascript" src="/static/script/pages/female.js"></script>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="/static/css/swiper-3.4.1.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/all.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/score.css">
+	<title><%=nav %></title>
+</head>
+<body>
+<div id="appBook" class="container">
+	<% include include/common_header.html %>
+	<section class="book-container" :style="screenHeight">
+		<div class="book-top clearfix">
+			<div class="book-img">
+				<img :src="item.cover" :alt="item.title" />
+			</div>
+			<div class="book-detail">
+				<p class="title">{{item.title}}</p>
+				<p class="author">{{item.authors}}</p>
+				<% include include/common_score.html %>
+				<p>价格：{{item.price}}书币/千字</p>
+				<p>字数：{{item.word_count}}字 <i class="tag">连载中</i></p>
+			</div>
+		</div>
+		<a class="start-reading" v-on:click="readBook()">开始阅读</a>
+		<p class="book-summary" v-bind:class="{ hide: ishide }" v-on:click="hide">{{item.summary}}</p>
+		<p class="lastest-one">{{item.latest}}</p>
+		<div class="category-tags">
+			<h3>类别标签</h3>
+			<p><span v-for="tag in item.tags">{{tag}}</span></p>
+		</div>
+		<div class="category-tags book-list">
+			<h3>作者其他图书</h3>
+			<ul class="clearfix">
+				<li v-for="book in author_books">
+					<img :src="book.cover" :alt="book.title">
+					<p>{{book.title}}</p>
+				</li>
+			</ul>
+		</div>
+		<div class="category-tags book-list">
+			<h3>喜欢此书的人也喜欢</h3>
+			<ul class="clearfix">
+				<li v-for="book in related">
+					<img :src="book.cover" :alt="book.title">
+					<p>{{book.title}}</p>
+				</li>
+			</ul>
+		</div>
+		<div class="category-tags book-list">
+			<h3>其他</h3>
+			<p>版权：{{item.rights}}</p>
+		</div>
+	</section>
+</div>
+</body>
+<script type="text/javascript" src="/static/script/vue.js"></script>
+<script type="text/javascript" src="/static/script/zepto.js"></script>
+<script type="text/javascript" src="/static/script/pages/book.js"></script>
+</html>

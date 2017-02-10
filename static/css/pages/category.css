@@ -1,0 +1,54 @@
+.category-container{
+	position: fixed;
+	top: 44px;
+	left: 0;
+	overflow-y: scroll;
+}
+.category-list.list04{
+	padding-bottom: 50px;
+}
+.category-list h2{
+	padding: 0 40px;
+    font-size: 14px;
+    line-height: 40px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    text-indent: 10px;
+}
+.category-list h2:after{
+	content: '';
+	width: 26px;
+	height: 26px;
+	position: absolute;
+	left: 15px;
+	top: 6px;
+	background: url(../../img/category_menu.png) no-repeat;
+	background-size: cover;
+}
+.category-list ul li{
+	float: left;
+	width: 50%;
+	position: relative;
+	border: 5px solid #fff;
+    box-sizing: border-box;
+}
+.category-list ul li .con{
+	position: absolute;
+	left: 6%;
+	top: 25%;
+}
+.category-list ul li .con p{
+	line-height: 20px;
+}
+.category-list.book ul li{
+	width: 25%;
+}
+.category-list.book ul li .con p{
+	color: #fff;
+}
+.category-list.book ul li .con{
+	top: 62%;
+}
+.category-list.book h2:after{
+	background-position: 0 -26px;
+}

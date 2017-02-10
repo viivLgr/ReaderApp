@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="/static/css/swiper-3.4.1.min.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/all.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/pages/rank.css">
+		<title><%=nav %></title>
+    </head>
+    <body>
+		<% include include/common_header.html %>
+		<div class="rank-container" id="rank" v-bind:style="[screenHeight,screenWidth]">
+			<ul class="clearfix">
+				<li v-for="(item,index) in data.items">
+					<img :src="item.cover" :alt="item.name">
+					<p>{{item.name}}</p>
+				</li>
+			</ul>
+		</div>
+    </body>
+<script type="text/javascript" src="/static/script/vue.js"></script>
+<script type="text/javascript" src="/static/script/zepto.js"></script>
+<script type="text/javascript" src="/static/script/pages/rank.js"></script>
+</html>

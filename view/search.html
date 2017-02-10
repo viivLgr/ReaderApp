@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="/static/css/swiper-3.4.1.min.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/all.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/pages/search.css">
+		<title><%=nav %></title>
+    </head>
+    <body>
+		<% include include/common_header.html %>
+		<div class="search-container" id="search" :style="screenHeight">
+			<div class="search-header">
+				<a href="javascript:$G.goBack();" class="search-back"></a>
+				<div class="input-box">
+					<span class="input-left" v-on:click="doSearch"></span>
+					<input type="text" id="searchValue" placeholder="书名/作者" />
+				</div>
+				<button type="submit" class="search-submit" v-on:click="doSearch">搜索</button>
+			</div>
+			<div class="search-list channel-h5" v-show="!empty" :style="listHeight">
+				<ul class="list-h5">
+					<li v-for="(item,index) in search">
+						<a v-bind:href="go(item.id)" class="book-h5">
+							<div class="cover">
+								<img v-bind:alt="item.title" v-bind:src="item.cover" />
+							</div>
+							<div class="info">
+								<p class="title">{{item.title}}</p>
+								<p class="author">{{item.role[0][0]}}:{{item.role[0][1]}}</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div v-if="empty" class="no-list">
+				<p class="no-list">暂无搜索结果</p>
+			</div>
+		</div>
+    </body>
+<script type="text/javascript" src="/static/script/vue.js"></script>
+<script type="text/javascript" src="/static/script/zepto.js"></script>
+<script type="text/javascript" src="/static/script/pages/search.js"></script>
+</html>

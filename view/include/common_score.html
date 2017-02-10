@@ -1,0 +1,14 @@
+<p class="common-score">
+	<span v-if="item.score>0 && item.score <=1" style="background-position:0 0px"></span>
+	<span v-if="item.score>1 && item.score <=2" style="background-position:0 -16px"></span>
+	<span v-if="item.score>2 && item.score <=3" style="background-position:0 -32px"></span>
+	<span v-if="item.score>3 && item.score <=4" style="background-position:0 -49px"></span>
+	<span v-if="item.score>4 && item.score <=5" style="background-position:0 -65px"></span>
+	<span v-if="item.score>5 && item.score <=6" style="background-position:0 -82px"></span>
+	<span v-if="item.score>6 && item.score <=7" style="background-position:0 -98px"></span>
+	<span v-if="item.score>7 && item.score <=8" style="background-position:0 -115px"></span>
+	<span v-if="item.score>8 && item.score <=9" style="background-position:0 -132px"></span>
+	<span v-if="item.score>9 && item.score <=10" style="background-position:0 -147px"></span>
+	<span v-if="item.score>10" style="background-position:0 -163px"></span>
+	{{item.score_count}}个评价
+</p>

@@ -1,0 +1,62 @@
+.search-container{
+	width: 100%;
+	position: relative;
+}
+.search-container .search-header{
+	height: 44px;
+	background: #eee;
+	padding: 5px 10px 5px 0;
+	display: flex;
+	border-top: 1px solid #ddd;
+}
+.search-container .search-header .search-back{
+	flex: 1;
+	background: url(../../img/back.png) no-repeat center;
+	background-size: 40%;
+}
+.search-container .search-header .input-box{
+	flex: 8;
+	border: 1px solid #ddd;
+	background: #fff;
+	display: flex;
+}
+.search-container .search-header .input-box .input-left{
+	flex: 1;
+	height: 44px;
+	background: url(../../img/search.png) no-repeat center;
+	background-size: 50%;
+	border-right: 1px solid #ddd;
+}
+.search-container .search-header .input-box input{
+	flex: 5;
+    height: 42px;
+    line-height: 42px;
+    border: none;
+    padding: 0 0 0 5px;
+    font-size: 14px;
+}
+.search-container .search-header .search-submit{
+	flex: 1;
+	border: 1px solid #ddd;
+	border-left: 0;
+	background: #fff;
+	font-size: 14px;
+}
+.no-list{
+	line-height: 44px;
+	text-align: center;
+	font-size: 14px;
+}
+.search-list{
+	border-bottom: 0;
+	position: fixed;
+    left: 0;
+    top: 99px;
+    overflow-y: scroll;
+}
+.search-list .list-h5 .book-h5 .info{
+	padding-top: 10px;
+}
+.search-list .list-h5 .book-h5 .info .title{
+	margin-bottom: 10px;
+}

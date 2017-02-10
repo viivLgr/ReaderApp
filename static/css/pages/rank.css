@@ -1,0 +1,27 @@
+.rank-container{
+	position: fixed;
+	top: 44px;
+	left: 0;
+	overflow-y: scroll;
+}
+.rank-container ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: flex-end;
+	padding-bottom: 40px;
+}
+.rank-container ul li{
+	width: 25%;
+	box-sizing: border-box;
+	padding: 10px;
+    text-align: center;
+}
+.rank-container ul li p{
+	line-height: 20px;
+	padding: 10px 0 5px;
+    border-bottom: 1px solid #eee;
+}
+.rank-container ul li img{
+	box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}

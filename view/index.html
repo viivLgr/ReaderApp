@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="/static/css/swiper-3.4.1.min.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/all.css">
+	<title><%=nav %></title>
+</head>
+<body>
+<div id="appIndex" class="container" v-bind:style="screenHeight">
+	<% include include/header.html %>
+	<div class="slide-wrap clearfix" v-bind:style="index_transform">
+		<div class="container-scroll" v-bind:style="[screenHeight,screenWidth]">
+			<% include include/index_swiper.html %>
+			<% include include/index_hot.html %>
+			<% include include/index_recommend.html %>
+			<% include include/index_female.html %>
+			<% include include/index_male.html %>
+			<% include include/index_free.html %>
+			<% include include/index_topics.html %>
+			<% include include/index_bottom.html %>
+		</div>
+		<div class="container-shelf" v-bind:style="[screenHeight,screenWidth]">
+			<% include include/index_shelf.html %>
+		</div>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="/static/script/vue.js"></script>
+<script type="text/javascript" src="/static/script/zepto.js"></script>
+<script type="text/javascript" src="/static/script/pages/index.js"></script>
+<script src="/static/script/jquery-1.10.1.min.js"></script>
+<script src="/static/script/swiper-3.4.1.min.js"></script>
+<script>        
+  var mySwiper = new Swiper ('.swiper-container', {
+    loop: true
+  })        
+</script>
+</html>

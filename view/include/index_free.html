@@ -1,0 +1,19 @@
+<section class="channel-h5 free">
+	<div class="channel-h5-header">
+		<p class="header-title">限时免费</p>
+	</div>
+	<ul class="list-h5 clearfix">
+		<li v-for="item in free">
+			<a v-bind:href="go(item.data.fiction_id)">
+				<div class="cover">
+					<img v-bind:alt="item.ad_name" :src="item.data.cover" />
+					<span class="img-tag">限免</span>
+				</div>
+				<div class="info">
+					<p class="title">{{item.ad_name}}</p>
+				</div>
+			</a>
+		</li>
+	</ul>
+	<a href="/free" class="channer-footer">更多限免佳作>></a>
+</section>

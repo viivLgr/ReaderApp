@@ -1,0 +1,27 @@
+<section class="channel-h5">
+	<div class="channel-h5-header">
+		<p class="header-title">男生最爱</p>
+	</div>
+	<ul class="list-h5">
+		<li v-for="(item,index) in male" v-if="index<5">
+			<div class="book-h5">
+				<div class="cover">
+					<img v-bind:alt="item.title" v-bind:src="item.cover" />
+					<p class="state" v-if="item.finish">完结</p>
+				</div>
+				<div class="info">
+					<p class="title">{{item.title}}</p>
+					<p class="author">{{item.authors}}</p>
+					<p class="summary">{{item.summary}}</p>
+					<div class="tags">
+						<span v-for="(tag,idx) in item.tags" v-if="idx<3">{{tag}}</span>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<div class="channer-footer">
+		<a href="javascript:">换一换</a>
+		<a href="/male">男生频道>></a>
+	</div>
+</section>
