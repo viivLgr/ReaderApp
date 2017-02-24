@@ -2,7 +2,7 @@
 * @Author: viiv
 * @Date:   2017-02-06 10:14:40
 * @Last Modified by:   viiv
-* @Last Modified time: 2017-02-09 17:56:47
+* @Last Modified time: 2017-02-24 15:33:00
 */
 .header-tab{
 	text-align: center;
@@ -65,6 +65,9 @@
 .header-tab .swipertabon{color: #f40;}
 .container{width:100%; overflow:hidden;position:relative;}
 .container-scroll,.container-shelf{float: left;}
+.container-scroll{
+	overflow: hidden;
+}
 .swiper-container{width: 100%;}
 .slide-wrap{position: absolute;top: 45px;left:0;right:0;bottom:0;overflow-y: scroll;}
 .swiper-home{

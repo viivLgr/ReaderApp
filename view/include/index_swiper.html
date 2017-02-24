@@ -6,7 +6,7 @@
 	    <div class="swiper-wrapper">
 	        <div class="swiper-slide" v-for="(item,index) in swiper" v-if="index<1">
 	        	<a v-bind:href="item.reference_id">
-					<img v-bind:alt="item.ad_name" v-bind:src="item.ad_pic_url" class="cover">
+					<img v-bind:alt="item.ad_name" v-bind:src="item.ad_pic_url" class="cover" v-bind:style="[screenWidth]">
 				</a>
 	        </div>
 	    </div>
